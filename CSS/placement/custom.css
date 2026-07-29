@@ -1,0 +1,35 @@
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+#Logo{
+    width: 100px;
+}
+
+.main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* a:hover it make when you point on the a it will have something happen 
+ */
+a:hover{
+    background: rgb(41, 135, 10);
+    border-radius: 10px;
+}
+a{
+    color: black;
+}
+
+#Logo:hover{
+    background: green ;
+    border-radius:10px ;
+
+}

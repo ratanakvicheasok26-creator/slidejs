@@ -1,0 +1,571 @@
+/* Global Styles */
+:root {
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --accent: #2563eb;
+    --dark: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+}
+
+a,
+button,
+.card {
+    transition: all 0.25s ease;
+}
+
+/* Header and Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.logo-text,
+.footer-logo {
+    color: var(--primary) !important;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.navbar .nav-link {
+    color: var(--text);
+    font-weight: 600;
+    margin-left: 0.75rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-toggler {
+    border-color: var(--border);
+}
+
+/* Hero Banner Section */
+.hero-section {
+    min-height: 92vh;
+    padding-top: 5rem;
+    background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.8), rgba(15, 118, 110, 0.52)),
+    url("images/Court1.png") center/cover no-repeat;
+}
+
+.hero-section .row {
+    min-height: 82vh;
+}
+
+.hero-label,
+.section-label {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.hero-section .hero-label {
+    color: #a7f3d0;
+}
+
+.H1,
+.hero-title {
+    color: var(--white);
+    font-size: clamp(3rem, 8vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 1.25rem 0 2rem;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.hero-btn,
+.btn-primary {
+    border: 0;
+    border-radius: 8px;
+    padding: 0.75rem 1.35rem;
+    font-weight: 700;
+    background: var(--primary);
+    box-shadow: 0 12px 25px rgba(15, 118, 110, 0.22);
+}
+
+.hero-btn:hover,
+.btn-primary:hover,
+.btn-primary:active {
+    background: var(--primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(15, 118, 110, 0.28);
+}
+
+.btn-outline-light {
+    border-radius: 8px;
+    padding: 0.75rem 1.35rem;
+    font-weight: 700;
+}
+
+.btn-outline-light:hover {
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card1,
+.card2,
+.venue-card,
+.manager-card,
+.info-item,
+.map-container {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.manager-card {
+    width: 100% !important;
+    max-width: 22rem;
+    margin-left: auto;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.photo1 {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border: 4px solid #ccfbf1;
+    border-radius: 50%;
+}
+
+.card-title {
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.card-text,
+.card p {
+    color: var(--muted);
+}
+
+.venues-section {
+    background: var(--white);
+}
+
+.section-heading h2 {
+    color: var(--dark);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.venue-card {
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden;
+}
+
+.venue-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.venue-card .card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+.venue-card .card-body {
+    min-height: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.35rem;
+}
+
+.venue-card .btn {
+    margin-top: auto;
+}
+
+/* Booking Info Section */
+.booking-info-section {
+    background: #f1f5f9;
+}
+
+.info-item {
+    height: 100%;
+    padding: 1.75rem;
+}
+
+.info-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-weight: 800;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.info-item h3 {
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.info-item p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* Location Section */
+.location-section {
+    background: var(--white);
+}
+
+.map-container {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.map-container::before {
+    content: "Paste Google Maps iframe here";
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+}
+
+.map-container:has(iframe)::before {
+    display: none;
+}
+
+/* Footer */
+.site-footer {
+    color: #cbd5e1;
+    background: var(--dark);
+}
+
+.site-footer h2,
+.site-footer h3 {
+    color: var(--white);
+    font-weight: 800;
+}
+
+.site-footer h3 {
+    font-size: 1.1rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.35rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    color: #e2e8f0;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #5eead4;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 0;
+    }
+
+    .manager-card {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 5.5rem;
+    }
+
+    .hero-section .row {
+        min-height: auto;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .venue-card .card-img-top {
+        height: 205px;
+    }
+
+    .venue-card .card-body {
+        min-height: auto;
+    }
+
+    .hero-btn,
+    .btn-primary,
+    .btn-outline-light {
+        width: 100%;
+    }
+}
+
+/* Football court Listing Page */
+.court-page {
+    background:
+        radial-gradient(circle at top left, rgba(94, 234, 212, 0.18), transparent 32rem),
+        linear-gradient(180deg, #f8fafc 0%, #eef7f3 52%, #f8fafc 100%);
+}
+
+.court-nav {
+    padding: 1rem 0;
+    background: rgba(15, 23, 42, 0.2);
+}
+
+.court-nav .logo-text {
+    color: var(--white) !important;
+}
+
+/*  for put the background for the header of the website in the court of football */
+.court-hero {
+    min-height: 520px;
+    color: var(--white);
+    background:
+        linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(15, 118, 110, 0.66)),
+        url("images/Court1.png") center/cover no-repeat;
+}
+
+.court-hero-content {
+    max-width: 720px;
+    padding: 7rem 0 5.5rem;
+}
+
+.court-hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 0;
+}
+
+.court-hero-content > p:not(.hero-label) {
+    max-width: 620px;
+    margin: 1.25rem 0 1.7rem;
+    color: #e2e8f0;
+    font-size: 1.12rem;
+    line-height: 1.7;
+}
+
+.court-quick-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.court-quick-info span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0.55rem 0.85rem;
+    color: #ecfeff;
+    font-size: 0.92rem;
+    font-weight: 800;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.court-list-section {
+    padding: 4.5rem 0 5rem;
+}
+
+.court-heading {
+    max-width: 760px;
+    margin-bottom: 2rem;
+}
+
+.court-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+}
+
+.court-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(15, 118, 110, 0.34);
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.15);
+}
+
+.court-image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #dbeafe;
+}
+
+.court-card .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.court-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.court-badge {
+    position: absolute;
+    top: 0.85rem;
+    left: 0.85rem;
+    padding: 0.4rem 0.65rem;
+    color: #064e3b;
+    font-size: 0.76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background: #ccfbf1;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+}
+
+.court-card .card-body {
+    display: flex;
+    min-height: 215px;
+    flex-direction: column;
+    padding: 1.35rem;
+}
+
+.court-card .card-title {
+    min-height: 3rem;
+    margin-bottom: 0.65rem;
+    font-size: 1.22rem;
+}
+
+.court-meta {
+    margin-bottom: 1.25rem;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.court-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+    margin-top: auto;
+}
+
+
+
+.location-link {
+    color: var(--primary-dark);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.location-link::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 0.45rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.location-link:hover {
+    color: var(--accent);
+}
+
+.price-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .court-hero {
+        min-height: auto;
+    }
+
+    .court-hero-content {
+        padding: 4.5rem 0;
+    }
+
+    .court-list-section {
+        padding: 3.25rem 0 4rem;
+    }
+
+    .court-card .card-body {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .court-card-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .price-btn {
+        width: 100%;
+    }
+}
+
